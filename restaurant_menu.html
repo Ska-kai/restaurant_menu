@@ -1,0 +1,516 @@
+<!-- P.S most of the styling was done by the help of Chatgpt. Enjoy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Drunken Chimera 🍻</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Pirata+One&family=Uncial+Antiqua&family=Cinzel&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #2B1D0E;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+         }
+
+        /* Header Image */
+        #header-image {
+            height: 630px; 
+            width: 100%; 
+            display: block;
+        }
+
+            /* Navigation Bar */
+         .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2a1d0a;
+            width: 100%;
+         }
+
+         /* Navigation List */
+         .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid rgba(200, 162, 200, 0.5);
+            width: 100%;
+         }
+
+         /* Navigation Items */
+         .navbar li {
+            width: 100%;
+            text-align: center; /* Centers the text inside each section */
+         }
+
+         /* Navigation Links */
+         .nav-link {
+            text-decoration: none;
+            font-family: 'Pirata One', cursive;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #c8a2c8; /* Mystic purple */
+            display: flex;
+            justify-content: center; /* Ensures the text and emoji are centered */
+            align-items: center;
+            gap: 5px;
+            padding: 10px 20px;
+            border-right: 1px solid rgba(200, 162, 200, 0.5);
+         }
+
+         /* Remove right border from last item */
+         .navbar li:last-child .nav-link {
+            border-right: none;
+         }
+
+         /* Hover Effect */
+         .navbar li:hover {
+            background-color: rgba(128, 107, 128, 0.192); /* Light purple tint */
+         }
+
+         .navbar li:hover .nav-link {
+            color: #f4e2a6; /* Golden glow */
+         }
+
+         h1 {
+         font-size: 3.5rem;
+         font-weight: 800;
+         text-align: center;
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         color: #FFD700; /* Gold */
+         background: linear-gradient(90deg, #FFD700, #FF8C00);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+         margin-bottom: 20px;
+         padding: 10px 20px;
+         border-bottom: 4px solid rgba(255, 140, 0, 0.6);
+         display: inline-block;
+         animation: glow 1.5s infinite alternate;
+      }
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 140, 0, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 140, 0, 1);
+    }
+}
+
+        /* Menu Item Styling */
+      .menu-item {
+         display: flex;
+         align-items: flex-start; /* Align items to the top */
+         gap: 20px; /* Space between image and text */
+         margin-bottom: 30px;
+         max-width: 900px; /* Adjust to your layout */
+         padding: 15px;
+         background: rgba(20, 20, 20, 0.7); /* Elegant dark background */
+         border-radius: 12px;
+         box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); /* Soft gold glow */
+         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .menu-item:hover {
+         transform: scale(1.02);
+         box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+      }
+
+      /* Image Styling */
+      .menu-item-image, .menu-item-image-3 {
+         width: 300px; /* Adjust size as needed */
+         height: auto;
+         border-radius: 10px;
+         object-fit: cover;
+         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .menu-item-image-3 {
+         width: 312px;
+         height: 390px;
+      }
+
+      /* Text Container */
+      .menu-item-text {
+         display: flex;
+         flex-direction: column;
+         flex: 1;
+         align-items: flex-start; /* Align text to the left */
+      }
+
+      /* Heading */
+      .menu-item-heading {
+         font-size: 22px;
+         margin: 0;
+         color: #c8a2c8;
+         text-align: left;
+      }
+
+      /* Description */
+      .menu-item-description {
+         font-size: 16px;
+         color: #ddd;
+         margin-top: 5px;
+         line-height: 1.5;
+         text-align: left; /* Keeps descriptions aligned left */
+      }
+
+      /* Price Styling */
+      .price {
+         font-size: 22px;
+         font-weight: bold;
+         color: #fff;
+         background: linear-gradient(135deg, #ffcc00, #ff9900); /* Luxurious gold gradient */
+         padding: 8px 15px;
+         border-radius: 8px;
+         align-self: flex-end; /* Moves price to the right */
+         box-shadow: 0 2px 10px rgba(255, 165, 0, 0.5);
+      }
+
+
+         /* Order form */
+         
+         /* Order Form Styling */
+         .order-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            font-family: 'Merriweather', serif;
+            color: #f8f8f8;
+         }
+
+         .order-form h3 {
+            font-size: 1.5rem;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+         }
+
+         .order-form-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 8px;
+         }
+
+         .order-form input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            border-radius: 6px;
+            border: none;
+            font-size: 1rem;
+            text-align: center;
+            background: #2d2d2d;
+            color: white;
+         }
+
+         .order-form input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #ffcc00;
+            margin-left: 10px;
+            cursor: pointer;
+         }
+
+         .order-form input[type="number"]:focus {
+            outline: 2px solid #ffcc00;
+         }
+
+         .Section-heading {
+            text-align: center;
+            font-size: 2rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+         }
+
+         .order-submit {
+         width: 100%;
+         padding: 12px;
+         margin-top: 20px;
+         font-size: 1.2rem;
+         font-weight: bold;
+         text-transform: uppercase;
+         letter-spacing: 1.5px;
+         color: #2d2d2d;
+         background: linear-gradient(90deg, #ffcc00, #ff9900);
+         border: none;
+         border-radius: 8px;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+         box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+      }
+
+      .order-submit:hover {
+         background: linear-gradient(90deg, #ff9900, #ff6600);
+         box-shadow: 0 6px 14px rgba(255, 102, 0, 0.6);
+         transform: scale(1.05);
+      }
+
+      .order-submit:active {
+         transform: scale(0.98);
+         box-shadow: 0 2px 8px rgba(255, 102, 0, 0.5);
+      }
+
+      textarea {
+         width: 100%;
+         padding: 10px;
+         border: 2px solid #ffcc00;
+         border-radius: 8px;
+         background: rgba(255, 255, 255, 0.1);
+         color: #fff;
+         font-size: 16px;
+         resize: vertical; /* Allows resizing vertically but not horizontally */
+      }
+
+      textarea::placeholder {
+         color: #ccc;
+         font-style: italic;
+      }
+
+      textarea:focus {
+         border-color: #ff9900;
+         box-shadow: 0 0 8px rgba(255, 153, 0, 0.5);
+         outline: none;
+      }
+
+      /* Footer */
+
+      footer {
+         background: rgba(0, 0, 0, 0.8);
+         color: #f8f8f8;
+         text-align: center;
+         padding: 20px;
+         font-family: 'Merriweather', serif;
+         position: relative;
+         bottom: 0;
+         width: 100%;
+      }
+
+      .footer-menu {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+      }
+
+      .footer-menu li {
+         display: inline;
+      }
+
+      .footer-menu a {
+         text-decoration: none;
+         color: #ffcc00;
+         font-weight: bold;
+         transition: color 0.3s ease-in-out;
+      }
+
+      .footer-menu a:hover {
+         color: #ff4500;
+      }
+
+      .footer-text {
+         margin-top: 10px;
+         font-size: 0.9rem;
+      }
+
+      .footer-text span {
+         font-weight: bold;
+         color: #ffcc00;
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="/restaurant_menu/Images/Untitled design (3).png" alt="Banner+logo" id="header-image">
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-link" href="restaurant_menu.html">Home 🏡</a></li>
+                <li><a class="nav-link" href="restaurant_menu.html">About us 🤔</a></li>
+                <li><a class="nav-link" href="#Menu">Menu 📖</a></li>
+                <li><a class="nav-link" href="#Drinks">Drinks 🍻</a></li>
+                <li><a class="nav-link" href="#Order">Order</a></li>
+                <li><a class="nav-link" href="#footer">Contact 📞</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Hero-section -->
+    <section class="Hero-section">
+      <h1>🔥 "Feast Like a Beast, Drink Like a Legend!" 🔥</h1>
+    </section>
+
+    <!--Menu-->
+    <main>
+      <h2 id="Menu" class="Section-heading">Menu 📖</h2>
+      
+         <article class="menu-item">
+            <img src="/restaurant_menu/Images/Designer (10).jpeg" alt="" class="menu-item-image">
+            <div class="menu-item-text">
+               <h3 class="menu-item-heading">🍖 Titan’s Feast Platter</h3>
+               <p class="menu-item-description">
+                     A colossal 12kg slow-roasted tomahawk steak, basted in garlic-herb butter mixed with Minotaur Marrow Oil (known to grant immense strength), 
+                     served on a charred wooden slab with bone marrow-infused gravy, flame-kissed mushrooms, and molten cheddar potatoes dusted with Ashen Basil 
+                     (a rare herb that grows in volcanic soil).
+               </p>
+               <p class="price">$1200</p>
+            </div>
+         </article>
+            <hr/>
+
+         <article class="menu-item">
+            <img src="/restaurant_menu/Images/Designer (1).jpeg" alt="" class="menu-item-image">
+            <div class="menu-item-text">
+               <h3 class="menu-item-heading">🐐 Celestial Lamb & Starlit Mash</h3>
+               <p class="menu-item-description">
+                     A perfectly herb-crusted rack of lamb, slow-roasted over Moonstone Coals, infusing it with a delicate smokiness. The meat is tender, 
+                     infused with a hint of Silverdew Thyme, a rare herb that enhances natural flavors with a whisper of cool, earthy notes. Served atop a bed of 
+                     Velvet Starlit Mash—a luxurious, buttery potato purée blended with Lunar Truffle Essence, giving it a subtle glow. Finished with a drizzle of 
+                     Nebula Wine Reduction, a deep, velvety sauce with hints of dark berries and aged spices.
+               </p>
+               <p class="price">$1800</p>
+            </div>
+         </article>
+         <hr/>
+
+         <article class="menu-item">
+            <img src="/restaurant_menu/Images/Designer (2).jpeg" alt="" class="menu-item-image-3">
+            <div class="menu-item-text">
+               <h3 class="menu-item-heading">🐦‍🔥 Phoenix King's Feast</h3>
+               <p class="menu-item-description">
+                     🍗 A colossal platter fit for the mightiest of warriors, featuring a whole flame-roasted Thundercrest Chicken, basted with a glaze made from Molten Honey 
+                     and Ember Peppers, creating a perfect balance of fiery heat and caramelized sweetness. The skin is crisped to perfection, infused with Solar Basil and 
+                     Celestial Saffron, giving it an irresistible aroma.
+               </p>
+               <p class="menu-item-description">
+                     🥚 Beside it, golden Dragon Egg Dumplings—plump, bursting with a blend of Mystic Cheese, spiced Wyvern Sausage, and Wild Sky Herbs, wrapped in a delicate, moon-kissed dough.
+               </p>
+               <p class="menu-item-description">
+                     🥗 Accompanied by a Titan’s Harvest Salad, made with Starfruit Slivers, Abyss Olives, and Etherleaf Greens, tossed in an Elderflame Citrus Dressing that adds a bright, refreshing contrast to the hearty feast.
+               </p>
+               <p class="menu-item-description">
+                     🫓 Served with Cloudcrest Flatbreads, freshly baked over enchanted coals, infused with a hint of Mythic Garlic Butter, perfect for soaking up the rich juices of the feast.
+               </p>
+
+               <p class="price">$2400</p>
+            </div>
+         </article>
+         <hr/>
+
+         <article class="menu-item">
+            <img src="/restaurant_menu/Images/Designer (3).jpeg" alt="" class="menu-item-image-3">
+            <div class="menu-item-text">
+               <h3 class="menu-item-heading">🔥 Dragon’s Breath Mead</h3>
+               <p class="menu-item-description">
+                  A fiery blend of honey mead, infused with cinnamon, ghost pepper essence, and a drop of Molten Ember Extract (sourced from a Fire Drake’s hoard), topped with a mist of dry ice for a smoke-breathing effect. Good luck man
+               <p class="price">$120</p>
+            </div>
+         </article>
+         <hr/>
+
+         <article class="menu-item">
+            <img src="/restaurant_menu/Images/Designer (4).jpeg" alt="" class="menu-item-image-3">
+            <div class="menu-item-text">
+               <h3 class="menu-item-heading">❄️ Frostborn Elixir</h3>
+               <p class="menu-item-description">
+                  A glowing blue cocktail made with elderflower liqueur, white rum, coconut cream, and crushed ice, infused with a single shard of Everfrost Crystal (found in the heart of the Ice Wraith caverns), served in a crystal goblet rimmed with silver sugar.
+               </p>
+               <p class="price">$1023</p>
+            </div>
+         </article>
+         <hr/>
+
+         <article class="menu-item">
+            <img src="/restaurant_menu/Images/Designer (6).jpeg" alt="" class="menu-item-image-3">
+            <div class="menu-item-text">
+               <h3 class="menu-item-heading">⚡Electric Sunset</h3>
+               <p class="menu-item-description">
+                  This cocktail is a mesmerizing fusion of strength, smoothness, and tropical elegance, visually resembling a sunset trapped in a glass. It starts with a deep electric blue base, gradually blending into a vivid magenta and fiery orange hue, creating a striking gradient effect.
+               </p>
+               <p class="menu-item-description">
+                  Every sip delivers a bold yet silky balance of whiskey, vodka, and overproof rum, softened by the lush sweetness of mango dragon fruit syrup and lychee essence. The fresh citrus notes of orange and lemon add a refreshing brightness, while the sparkling wine and carbonated lychee water bring a crisp, effervescent lift.
+               </p> 
+               <p class="menu-item-description">
+                  Tiny crushed sparkly candy dances within, giving it a playful shimmer, while a frosted rim dusted with edible glitter makes each sip feel indulgent. The torched lemon zest and fresh lychee garnish release an aromatic burst, rounding out the experience with a subtle tropical perfume.
+               </p>
+               <p class="menu-item-description">  
+                  Chilled to perfection with fine-crushed ice, this cocktail is intensely strong yet dangerously smooth, delivering a cooling effect that lingers—like the final glow of twilight before the night takes over. 🌌🔥🍸
+               </p>
+               <p class="menu-item-description">Cosmic Whiskey (45% ABV) , Overproof White nebula Rum (55% ABV) ,Russian Vodka (50% ABV) , Blue Curaçao (20% ABV), Mango Dragon Fruit Syrup ,Lychee Liqueur (20% ABV) , Fresh Orange Juice , Fresh Lemon Juice , Simple Syrup, White Sparkling Wine (12% ABV), Crushed Ice, Lemon Zest, Sparkly Candy (for garnish)</p>
+               <p class="price">$2400</p>
+            </div>
+         </article>
+         <hr/>
+      </main>
+      <hr/><hr/><hr/>
+
+      <!-- PLace order form -->
+      <h2 class="Section-heading" id="Order">Place your order</h2>
+      <form class="order-form" >
+         <h3>Mains</h3>
+         <label class="order-form-label">🍖 Titan’s Feast Platter: <input type="Number" min="0"></label> 
+         <label class="order-form-label">🐐 Celestial Lamb & Starlit Mash: <input type="number" min="0"></label>
+         <label class="order-form-label">🐦‍🔥 Phoenix King's Feast: <input type="number" min="0"></label>
+         <label class="order-form-label">🔥 Dragon’s Breath Mead: <input type="number" min="0"></label>
+         <label class="order-form-label">❄️ Frostborn Elixir: <input type="number" min="0"></label>
+         <label class="order-form-label">⚡Electric Sunset: <input type="number" min="0"></label>
+
+         <h3>Sides & Add-ons</h3>
+         <label  class="order-form-label">🧄 Emberstone Truffle Fries - $300<input type="checkbox"></label>
+         <label  class="order-form-label">🧀 Wyvern's Smoked Cheese Board – $600<input type="checkbox"></label>
+         <label  class="order-form-label">🍞 Arcane Butter Rolls – $150<input type="checkbox"></label>
+         <label  class="order-form-label">🔥 Infernal Lava Wings – $330<input type="checkbox"></label>
+         <label  class="order-form-label">🥔 Titan’s Hearth Roasted Vegetables – $150<input type="checkbox"></label>
+         <label  class="order-form-label">🥩 Minotaur’s Bone Broth Soup – $390<input type="checkbox"></label>
+         
+         <!-- Textarea for Special Requests -->
+         <label class="order-form-label">📝 Special Requests / Notes:</label>
+         <textarea id="order-notes" name="order-notes" rows="4" placeholder="Any specific requests, allergies, or preferences..."></textarea>
+
+         <input type="submit" value="Place your order" class="order-submit">
+      </form>
+
+      <footer>
+         <ul class="footer-menu">
+            <li><a href="#">Eat</a></li>
+            <li><a href="#">Enjoy</a></li>
+            <li><a href="#">Get Drunk</a></li>
+            <li><a href="#">Party</a></li>
+            <li><a href="#">Conquer</a></li>
+            <li><a href="#">Memories</a></li>
+         </ul>
+      
+         <p class="footer-text">Made with ❤️ and AI by <span>@Ska</span></p>
+      </footer>
+   </body>
+</html>
